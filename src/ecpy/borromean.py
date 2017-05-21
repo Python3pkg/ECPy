@@ -217,10 +217,10 @@ if __name__ == "__main__":
     import sys
  
     def strsig(sigma):
-        print("e0: %s"%h(sigma[0]))
+        print(("e0: %s"%h(sigma[0])))
         i=0
         for s in sigma[1]:
-            print("s%d: %s"%(i,h(s)))
+            print(("s%d: %s"%(i,h(s))))
             i += 1
     try:
 
@@ -274,18 +274,18 @@ if __name__ == "__main__":
         for l in range(2,len(allpubs)):
             pubs = allpubs[:l]
             secs = allsecs[:l]
-            print("pool has %d key"%len(pubs))
+            print(("pool has %d key"%len(pubs)))
             for i in range(1,len(pubs)):
                 pubring1 = pubs[0:i]
                 pubring2 = pubs[i:]
                 secring1 = secs[0:i]
                 secring2 = secs[i:]
         
-                print("ring1 has %d keys"%len(pubring1))
-                print("ring2 has %d keys"%len(pubring2))
+                print(("ring1 has %d keys"%len(pubring1)))
+                print(("ring2 has %d keys"%len(pubring2)))
                 for s1 in range(0,len(pubring1)):
                     for s2 in range(0,len(pubring2)):
-                        print("testing %d %d"%(s1,s2))
+                        print(("testing %d %d"%(s1,s2)))
                         pubset = (pubring1 , pubring2)
                         secset = [secring1[s1] , secring2[s2]]
                         secidx = [s1,s2]
